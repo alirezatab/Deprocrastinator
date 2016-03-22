@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DeprocrastinatorViewController.h
 //  Deprocrastinator
 //
 //  Created by ALIREZA TABRIZI on 3/21/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DeprocrastinatorViewController : UIViewController
 
 @end
-
