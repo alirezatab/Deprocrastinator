@@ -8,7 +8,10 @@
 
 #import "DeprocrastinatorViewController.h"
 
-@interface DeprocrastinatorViewController ()
+@interface DeprocrastinatorViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *textFieldLabel;
+@property NSMutableArray *toDo;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,12 +19,59 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.toDo = [[NSMutableArray alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.text = [self.toDo objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.toDo.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.textLabel.highlightedTextColor = [UIColor greenColor];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (IBAction)onAddButtonPressed:(UIBarButtonItem *)sender {
+    //self.textField.text =
+    [self getTextFromTextField];
+    [self.tableView reloadData];
+    [self.textFieldLabel resignFirstResponder];
+    
+}
+- (IBAction)onEditButtonPressed:(id)sender {
+    //setLeftBarButtonItem:<#(nullable UIBarButtonItem *)#> animated:YES];
+    //self.navigationItem.leftBarButtonItem.title = @"Done";
+
+    if ([self.navigationItem.leftBarButtonItem.title isEqualToString:@"Edit"])
+    {NSLog(@"inside the if statemenet");
+        self.navigationItem.leftBarButtonItem.title= @"Done";
+    }
+}
+
+
+//tableView, canMove
+//tabeView, canEdit
+
+-(void)getTextFromTextField
+{
+    NSString *newText = self.textFieldLabel.text;
+    [self.toDo addObject:newText];
+    //NSLog(@"%@", newText);
 }
 
 /*

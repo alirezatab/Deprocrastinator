@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		C2F23F551CA09F000065EBAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F23F541CA09F000065EBAF /* main.m */; };
 		C2F23F581CA09F000065EBAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F23F571CA09F000065EBAF /* AppDelegate.m */; };
-		C2F23F5B1CA09F000065EBAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F23F5A1CA09F000065EBAF /* ViewController.m */; };
 		C2F23F5E1CA09F000065EBAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F23F5C1CA09F000065EBAF /* Main.storyboard */; };
 		C2F23F601CA09F000065EBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2F23F5F1CA09F000065EBAF /* Assets.xcassets */; };
 		C2F23F631CA09F000065EBAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F23F611CA09F000065EBAF /* LaunchScreen.storyboard */; };
+		C2F23F6C1CA09F1F0065EBAF /* DeprocrastinatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F23F6B1CA09F1F0065EBAF /* DeprocrastinatorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		C2F23F541CA09F000065EBAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2F23F561CA09F000065EBAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2F23F571CA09F000065EBAF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C2F23F591CA09F000065EBAF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C2F23F5A1CA09F000065EBAF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C2F23F5D1CA09F000065EBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2F23F5F1CA09F000065EBAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2F23F621CA09F000065EBAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2F23F641CA09F000065EBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2F23F6A1CA09F1F0065EBAF /* DeprocrastinatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeprocrastinatorViewController.h; sourceTree = SOURCE_ROOT; };
+		C2F23F6B1CA09F1F0065EBAF /* DeprocrastinatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeprocrastinatorViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				C2F23F561CA09F000065EBAF /* AppDelegate.h */,
 				C2F23F571CA09F000065EBAF /* AppDelegate.m */,
-				C2F23F591CA09F000065EBAF /* ViewController.h */,
-				C2F23F5A1CA09F000065EBAF /* ViewController.m */,
+				C2F23F6A1CA09F1F0065EBAF /* DeprocrastinatorViewController.h */,
+				C2F23F6B1CA09F1F0065EBAF /* DeprocrastinatorViewController.m */,
 				C2F23F5C1CA09F000065EBAF /* Main.storyboard */,
 				C2F23F5F1CA09F000065EBAF /* Assets.xcassets */,
 				C2F23F611CA09F000065EBAF /* LaunchScreen.storyboard */,
@@ -150,8 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2F23F5B1CA09F000065EBAF /* ViewController.m in Sources */,
 				C2F23F581CA09F000065EBAF /* AppDelegate.m in Sources */,
+				C2F23F6C1CA09F1F0065EBAF /* DeprocrastinatorViewController.m in Sources */,
 				C2F23F551CA09F000065EBAF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
