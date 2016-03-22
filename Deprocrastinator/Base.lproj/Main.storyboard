@@ -47,12 +47,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2oh-AF-WDx" secondAttribute="bottom" id="DYz-A7-Fd6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2oh-AF-WDx" secondAttribute="trailing" constant="-20" id="Ldq-TN-Cva"/>
                             <constraint firstItem="2oh-AF-WDx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="UK0-Ko-BtO"/>
                             <constraint firstItem="2oh-AF-WDx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="uS5-zW-COW"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2ac-LY-VWW" appends="YES" id="nqi-fJ-fA4"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="XHG-SV-7Py">
                         <nil key="title"/>
@@ -79,8 +83,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="2ac-LY-VWW">
+                    <connections>
+                        <action selector="onSwipredRight:" destination="BYZ-38-t0r" id="eGV-lv-MsV"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="570" y="366"/>
+            <point key="canvasLocation" x="574" y="366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BFh-d4-eWe">
